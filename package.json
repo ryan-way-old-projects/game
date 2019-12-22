@@ -1,0 +1,26 @@
+{
+  "name": "game",
+  "version": "1.0.0",
+  "description": "game app",
+  "main": "out/main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryan-way/game.git"
+  },
+  "author": "ryan way",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryan-way/game/issues"
+  },
+  "homepage": "https://github.com/ryan-way/game#readme",
+  "dependencies": {
+    "electron": "^7.1.7",
+    "typescript": "^3.7.4"
+  }
+}
