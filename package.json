@@ -3,9 +3,20 @@
   "version": "0.0.0",
   "main": "main.js",
   "scripts": {
+    "postinstall": "electron-builder install-app-deps",
     "ng": "ng",
-    "start": "ng build && electron .",
-    "build": "ng build",
+    "start": "npm-run-all -p ng:serve electron:serve",
+    "build": "npm run electron:serve-tsc && ng build",
+    "build:dev": "npm run build -- -c dev",
+    "build:prod": "npm run build -- -c production",
+    "ng:serve": "ng serve",
+    "ng:serve:web": "ng serve -c web -o",
+    "electron:serve-tsc": "tsc -p tsconfig.json",
+    "electron:serve": "wait-on http-get://localhost:4200/ && npm run electron:serve-tsc && electron . --serve",
+    "electron:local": "npm run build:prod && electron .",
+    "electron:linux": "npm run build:prod && electron-builder build --linux",
+    "electron:windows": "npm run build:prod && electron-builder build --windows",
+    "electron:mac": "npm run build:prod && electron-builder build --mac",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -21,9 +32,11 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "electron": "^7.1.7",
+    "electron-reload": "^1.5.0",
+    "npm-run-all": "^4.1.5",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "webpack": "^4.41.4",
+    "wait-on": "^3.3.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
@@ -31,9 +44,9 @@
     "@angular/cli": "~8.3.19",
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -45,6 +58,8 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
   }
 }
