@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-cell',
+  selector: 'cell',
   templateUrl: './cell.component.html',
   styleUrls: ['./cell.component.css']
 })
