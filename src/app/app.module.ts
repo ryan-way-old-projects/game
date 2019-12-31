@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CellComponent } from './cell/cell.component';
 import { SubgridComponent } from './subgrid/subgrid.component';
+import { SudokuBoardComponent } from './sudoku-board/sudoku-board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CellComponent,
-    SubgridComponent
+    SubgridComponent,
+    SudokuBoardComponent
   ],
   imports: [
     BrowserModule,
