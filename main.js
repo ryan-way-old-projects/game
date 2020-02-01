@@ -8,7 +8,11 @@ const args = process.argv.slice(1),
     serve = args.some(val => val === '--serve');
 
 function createWindow() {
-  win = new BrowserWindow({width: 800, height: 600})
+  win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    icon: path.join(__dirname, '/src/favicon.ico'),
+  })
   if (serve) {
     require('electron-reload')(__dirname, {
       electron: require(`${__dirname}/node_modules/electron`)
