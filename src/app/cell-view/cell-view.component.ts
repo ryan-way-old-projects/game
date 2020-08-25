@@ -10,9 +10,11 @@ export class CellViewComponent implements OnInit {
   constructor() { }
 
   content: string;
+  isSelected: boolean;
 
   ngOnInit() {
     this.content = '9';
+    this.isSelected = true;
   }
 
 }
