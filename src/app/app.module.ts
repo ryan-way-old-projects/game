@@ -3,10 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CellComponent } from './cell/cell.component';
+import { SubgridComponent } from './subgrid/subgrid.component';
+import { SudokuBoardComponent } from './sudoku-board/sudoku-board.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CellComponent,
+    SubgridComponent,
+    SudokuBoardComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
