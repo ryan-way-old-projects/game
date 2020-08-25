@@ -1,0 +1,8 @@
+div {
+
+}
+
+div.selected {
+  background-color: darkred;
+  color: black;
+}
