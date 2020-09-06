@@ -1,11 +1,9 @@
 <div class="subgrid">
-  <app-cell-view class="grid-item"></app-cell-view>
-  <app-cell-view class="grid-item"></app-cell-view>
-  <app-cell-view class="grid-item"></app-cell-view>
-  <app-cell-view class="grid-item"></app-cell-view>
-  <app-cell-view class="grid-item"></app-cell-view>
-  <app-cell-view class="grid-item"></app-cell-view>
-  <app-cell-view class="grid-item"></app-cell-view>
-  <app-cell-view class="grid-item"></app-cell-view>
-  <app-cell-view class="grid-item"></app-cell-view>
+  <app-cell-view
+    class="grid-item"
+    *ngFor="let cell of this.Cells"
+    [Content]="cell.Content"
+    [Selected]="cell.Selected"
+    [Highlighted]="cell.Highlighted"
+    ></app-cell-view>
 </div>

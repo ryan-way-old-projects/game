@@ -13,15 +13,15 @@ export class CellViewComponent implements OnInit {
    */
   constructor() { }
 
-  @Input() content: string;
-  @Input() isSelected: boolean;
-  @Input() isHighlighted: boolean;
+  @Input() Content: string;
+  @Input() Selected: boolean;
+  @Input() Highlighted: boolean;
 
   ngOnInit() {
   }
 
   Select() {
-    this.isSelected = true;
+    this.Selected = true;
   }
 
 }
