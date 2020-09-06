@@ -1,0 +1,9 @@
+div.subgrid {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  width: 150px;
+}
+
+div.subgrid app-cell-view {
+  width: 50px;
+}
