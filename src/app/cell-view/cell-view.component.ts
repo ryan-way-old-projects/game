@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cell-view',
@@ -6,15 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cell-view.component.css']
 })
 export class CellViewComponent implements OnInit {
-
+  /**
+   * Use focus to implicitly keep one cell selected
+   * allow for disabling of focusableness
+   * allow for highlighting
+   */
   constructor() { }
 
-  content: string;
-  isSelected: boolean;
+  @Input() Content: string;
+  @Input() Selected: boolean;
+  @Input() Highlighted: boolean;
 
   ngOnInit() {
-    this.content = '1';
-    this.isSelected = true;
+  }
+
+  Select() {
+    this.Selected = true;
   }
 
 }
