@@ -9,6 +9,7 @@ export class SubgridComponent implements OnInit {
 
   constructor() { }
 
+
   @Input() Cells: {Content: number, Selected: boolean, Highlighted: boolean}[]
 
   ngOnInit() {
