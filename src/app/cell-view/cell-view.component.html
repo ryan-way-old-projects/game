@@ -1,4 +1,8 @@
-<div id="cell" [ngClass]="{ 'selected' : this.isSelected }">
+<div id="cell"
+  [ngClass]="{ 'selected' : this.isSelected,
+    'highlighted' : this.isHighlighted }"
+  (click)="this.Select()"
+  tabindex=0>
   <p id="cell-content">
     {{ this.content }}
   </p>

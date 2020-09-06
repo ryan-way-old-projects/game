@@ -5,8 +5,18 @@ div#cell {
   position: relative;
 }
 
-div#cell.selected {
+div#cell:focus {
+  outline: none;
+}
+
+div#cell.highlighted {
   background-color: darkred;
+  border-radius: 100%;
+  color: darkgray;
+}
+
+div#cell.selected {
+  background-color: purple;
   border-radius: 100%;
   color: darkgray;
 }
