@@ -1,0 +1,9 @@
+div#sudoku {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  width: 453px;
+}
+
+div#sudoku app-subgrid {
+  width: 151px;
+}
