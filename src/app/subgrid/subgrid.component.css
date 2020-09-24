@@ -5,10 +5,10 @@ div#subgrid {
   height: 174px;
 }
 
-div#subgrid div#cell.border-right {
+div#subgrid app-cell-view.border-right {
   border-right: 2px solid darkred;
 }
 
-div#subgrid div#cell.border-bottom {
+div#subgrid app-cell-view.border-bottom {
   border-bottom: 2px solid darkred;
 }

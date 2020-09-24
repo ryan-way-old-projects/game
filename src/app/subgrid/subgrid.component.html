@@ -1,13 +1,11 @@
 <div id="subgrid">
-  <div id="cell" 
-       [ngClass]="{ 'border-right' : idx % 3 != 2,
-       'border-bottom' : idx < 6 }"
-     *ngFor="let cell of this.Cells; let idx = index">
-    <app-cell-view
-      class="grid-item"
-      [Content]="cell.Content"
-      [Selected]="cell.Selected"
-      [Highlighted]="cell.Highlighted"
-      ></app-cell-view>
-  </div>
+  <app-cell-view
+    class="grid-item"
+    *ngFor="let cell of this.Cells; let idx = index"
+    [ngClass]="{ 'border-right' : idx % 3 != 2,
+                  'border-bottom' : idx < 6 }"
+    [Content]="cell.Content"
+    [Selected]="cell.Selected"
+    [Highlighted]="cell.Highlighted"
+    ></app-cell-view>
 </div>
