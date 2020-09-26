@@ -1,9 +1,14 @@
-div.subgrid {
+div#subgrid {
   grid-template-columns: repeat(3, 1fr);
   display: grid;
-  width: 150px;
+  width: 174px;
+  height: 174px;
 }
 
-div.subgrid app-cell-view {
-  width: 50px;
+div#subgrid app-cell-view.border-right {
+  border-right: 2px solid darkred;
+}
+
+div#subgrid app-cell-view.border-bottom {
+  border-bottom: 2px solid darkred;
 }
