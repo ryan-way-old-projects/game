@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SudokuGameService } from '../sudoku-game.service';
 
 @Component({
   selector: 'app-subgrid',
@@ -7,22 +8,28 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SubgridComponent implements OnInit {
 
-  constructor() { }
+  @Input() X:number;
+  @Input() Y:number;
 
-  @Input() Cells: {Content: number, Selected: boolean, Highlighted: boolean}[]
+  @Input() Rows:number;
+  @Input() Cols:number;
 
-  ngOnInit() {
-    // this.Cells = [
-    //   { "Content" : 1, "Selected" : false, "Highlighted" : false},
-    //   { "Content" : 2, "Selected" : false, "Highlighted" : true},
-    //   { "Content" : 3, "Selected" : true,  "Highlighted" : false},
-    //   { "Content" : 4, "Selected" : true,  "Highlighted" : true},
-    //   { "Content" : 5, "Selected" : false, "Highlighted" : false},
-    //   { "Content" : 6, "Selected" : false, "Highlighted" : true},
-    //   { "Content" : 7, "Selected" : true,  "Highlighted" : false},
-    //   { "Content" : 8, "Selected" : true,  "Highlighted" : true},
-    //   { "Content" : 9, "Selected" : false, "Highlighted" : false},
-    // ];
+  Cells: number[][];
+
+  constructor(gameservice: SudokuGameService) 
+  {
+  }
+
+  ngOnInit()
+  {
+    this.Cells = [];
+    for (var y:number = 0; y < this.Rows; y++)
+    {
+      for (var x:number = 0; x < this.Cols; x++)
+      {
+        this.Cells.push([x+this.X, y+this.Y]);
+      }
+    }
   }
 
 }

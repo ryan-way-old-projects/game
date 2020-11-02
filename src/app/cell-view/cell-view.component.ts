@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SudokuGameService } from '../sudoku-game.service';
 
 @Component({
   selector: 'app-cell-view',
@@ -11,17 +12,25 @@ export class CellViewComponent implements OnInit {
    * allow for disabling of focusableness
    * allow for highlighting
    */
-  constructor() { }
-
-  @Input() Content: string;
   @Input() Selected: boolean;
   @Input() Highlighted: boolean;
+  @Input() X: number;
+  @Input() Y: number;
+
+  Value: string;
+  private _gameservice: SudokuGameService;
+
+  constructor(gameservice: SudokuGameService) {
+    this._gameservice = gameservice;
+  }
 
   ngOnInit() {
+    console.log(this.X % 3, this.Y);
+    this.Value = this._gameservice.EasyPuzzle[this.Y][this.X];
   }
 
   Select() {
-    this.Selected = true;
+    this.Selected = !this.Selected;
   }
 
 }

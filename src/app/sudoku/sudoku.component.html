@@ -1,9 +1,12 @@
 <div id="sudoku">
   <app-subgrid
     class="grid-item"
-    *ngFor="let subgrid of this.Subgrids; let idx=index"
-    [ngClass]="{ 'border-right' : idx % 3 != 2,
-                'border-bottom' : idx < 6 }"
-    [Cells]="subgrid.Cells"
+    *ngFor="let dim of this.Subgrids"
+    [ngClass]="{ 'border-right' : dim[0] != 6,
+                'border-bottom' : dim[1] != 6 }"
+    [X]="dim[0]"
+    [Y]="dim[1]"
+    Rows="3"
+    Cols="3"
     ></app-subgrid>
 </div>
