@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SudokuCellComponent } from '../sudokucell/sudokucell.component'
 
 @Component({
   selector: 'app-sudokugame',
