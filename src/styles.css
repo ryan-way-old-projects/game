@@ -35,7 +35,20 @@ orange  #fe8019
 
 */
 
-app-root {
+html * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: x-large;
   color: #ebdbb2;
+  background-color: #282828;
+}
+
+input {
+  -webkit-appearance: none;
+  padding: 0px;
+  border-width: 0px;
+  font: unset;
+}
+
+input:focus {
+  outline: none;
 }
