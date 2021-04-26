@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sudokucell',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sudokucell.component.css']
 })
 export class SudokuCellComponent implements OnInit {
+
+  @Input() Value: number;
 
   constructor() { }
 
