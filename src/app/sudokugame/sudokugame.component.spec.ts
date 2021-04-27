@@ -1,14 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { SudokuCellComponent } from '../sudokucell/sudokucell.component';
 
 import { SudokuGameComponent } from './sudokugame.component';
 
-describe('SudokugameComponent', () => {
+describe('SudokuGameComponent', () => {
   let component: SudokuGameComponent;
   let fixture: ComponentFixture<SudokuGameComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SudokuGameComponent ]
+      declarations: [ SudokuGameComponent, SudokuCellComponent ]
     })
     .compileComponents();
   }));

@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SudokuCellComponent } from './sudokucell.component';
 
-describe('SudokucellComponent', () => {
+describe('SudokuCellComponent', () => {
   let component: SudokuCellComponent;
   let fixture: ComponentFixture<SudokuCellComponent>;
 
