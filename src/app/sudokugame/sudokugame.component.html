@@ -1,1 +1,1 @@
-<app-sudokucell [Value]="this.board[0][0]" [ReadOnly]="true"></app-sudokucell>
+<app-sudokucell [Value]="this.board[0][0]" [ReadOnly]="true" (OnFocus)="onChange($event)" (OnBlur)="onChange($event)"></app-sudokucell>

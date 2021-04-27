@@ -25,4 +25,8 @@ export class SudokuGameComponent implements OnInit {
     ]
   }
 
+  onChange(msg: string) {
+    console.log(msg);
+  }
+
 }
