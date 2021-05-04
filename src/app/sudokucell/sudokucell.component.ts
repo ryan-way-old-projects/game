@@ -26,16 +26,10 @@ export class SudokuCellComponent implements OnInit {
   }
 
   blur() {
-    console.log("blurred");
-    this.Selected = true;
-    this.Highlighted = false;
     this.OnBlur.emit('Burred');
   }
 
   click() {
-    console.log("Clicked");
-    this.Selected = false;
-    this.Highlighted = true;
     this.OnClick.emit('Clicked');
   }
 
