@@ -1,0 +1,22 @@
+span {
+  height: 25px;
+  width: 25px;
+}
+
+input {
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  height: 50vw;
+  width: 50vw;
+}
+
+input.selected {
+  background-color: #ebdbb2;
+  color: #282828;
+}
+
+input.highlighted {
+  background-color: #cd241d;
+  color: #ebdbb2;
+}

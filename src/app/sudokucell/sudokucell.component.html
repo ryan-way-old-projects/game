@@ -1,1 +1,10 @@
-<input type="text" maxlength="1" [value]="this.Value" [readonly]="this.ReadOnly" (focus)="this.onFocus()" (blur)="this.onBlur()">
+<span >
+  <input type="text"
+         maxlength="1"
+         [ngClass]="{'selected': Selected, 'highlighted' : Highlighted}"
+         [value]="this.Value"
+         [readonly]="this.ReadOnly"
+         (click)="this.click()"
+         (focus)="this.focus()"
+         (blur)="this.blur()">
+</span>
