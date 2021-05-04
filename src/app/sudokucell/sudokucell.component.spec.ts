@@ -24,14 +24,32 @@ describe('SudokuCellComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('onFocus should fire OnFocus event', () => {
+  
+  it('focus calls OnFocus', () => {
     let focused: boolean = false;
     component.OnFocus.subscribe((event: string) => {
       focused = true;
     });
     component.focus();
     expect(focused).toBeTruthy();
+  });
+
+  it('blur calls on OnBlur', () => {
+    let blur: boolean = false;
+    component.OnBlur.subscribe((event: string) => {
+      blur = true;
+    });
+    component.blur();
+    expect(blur).toBeTruthy();
+  });
+  
+  it('click calls on OnClick', () => {
+    let click: boolean = false;
+    component.OnClick.subscribe((event: string) => {
+      click = true;
+    });
+    component.click();
+    expect(click).toBeTruthy();
   });
 
 });
