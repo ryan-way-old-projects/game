@@ -1,7 +1,7 @@
-import { Sudokucellvm } from './sudokucellvm';
+import { SudokuCellVm } from './sudokucellvm';
 
-describe('Sudokucellvm', () => {
+describe('SudokuCellVm', () => {
   it('should create an instance', () => {
-    expect(new Sudokucellvm()).toBeTruthy();
+    expect(new SudokuCellVm("")).toBeTruthy();
   });
 });

@@ -1,1 +1,5 @@
-<p>sudokuboard works!</p>
+<ul>
+  <li *ngFor="let cell of this.Context.Cells">
+    <app-sudokucell [Value]="cell.Value"></app-sudokucell>
+  </li>
+</ul>
