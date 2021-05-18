@@ -1,0 +1,10 @@
+app-sudokucell {
+  border: 2px solid white;
+  height: 50px;
+  width: 50px;
+}
+
+mat-grid-list {
+  height: 100%;
+  width: 100%;
+}
