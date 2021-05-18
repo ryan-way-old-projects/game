@@ -17,7 +17,8 @@ import { SudokuBoardComponent } from './sudokuboard/sudokuboard.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
