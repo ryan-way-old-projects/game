@@ -5,7 +5,7 @@ export class SudokuBoardVm {
   private board: string[][];
   private cells: SudokuCellVm[];
 
-  private get Cells() : SudokuCellVm[] {
+  private get Cells(): SudokuCellVm[] {
     return this.cells;
   }
 
