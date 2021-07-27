@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-sudokucell',
   templateUrl: './sudokucell.component.html',
   styleUrls: ['./sudokucell.component.css']
 })
-export class SudokuCellComponent implements OnInit {
+export class SudokuCellComponent implements OnInit, OnChanges {
 
   @Input() Value: number;
   @Input() ReadOnly: boolean;
@@ -31,6 +31,10 @@ export class SudokuCellComponent implements OnInit {
 
   click() {
     this.OnClick.emit('Clicked');
+  }
+
+   ngOnChanges(changes: SimpleChanges) {
+    console.log(changes);
   }
 
 }
