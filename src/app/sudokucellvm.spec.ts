@@ -6,10 +6,10 @@ describe('SudokuCellVm', () => {
   });
 
   it('should be readonly', () => {
-    expect(new SudokuCellVm('').IsReadOnly);
+    expect(new SudokuCellVm('9').IsReadOnly).toBeTruthy();
   });
 
   it('should not be read only', () => {
-    expect(!new SudokuCellVm('9').IsReadOnly);
+    expect(new SudokuCellVm('').IsReadOnly).toBeFalsy();
   });
 });
