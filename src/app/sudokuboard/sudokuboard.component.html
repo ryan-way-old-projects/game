@@ -1,5 +1,5 @@
 <mat-grid-list cols="9" rowHeight="fit">
-  <mat-grid-tile *ngFor="let cell of this.Context.Cells"
+  <mat-grid-tile *ngFor="let cell of this.Cells"
     colspan="1"
     rowspan="1">
     <app-sudokucell [Value]="cell.Value" [ReadOnly]="cell.IsReadOnly"></app-sudokucell>
