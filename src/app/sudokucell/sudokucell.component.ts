@@ -34,7 +34,6 @@ export class SudokuCellComponent implements OnInit, OnChanges {
   }
 
    ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
   }
 
 }

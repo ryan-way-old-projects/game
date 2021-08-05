@@ -31,6 +31,6 @@ export class SudokuCellVm {
 
   init() {
     this.selected = false;
-    this.readOnly = !isNaN(+this.value);
+    this.readOnly = this.value !== '' && !isNaN(+this.value);
   }
 }
